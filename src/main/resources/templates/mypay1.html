@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+
+    <!--<script type="text/javascript">-->
+
+    <!--function sleep(numberMillis) {-->
+    <!--var now = new Date();-->
+    <!--var exitTime = now.getTime() + numberMillis;-->
+    <!--while (true) {-->
+    <!--now = new Date();-->
+    <!--if (now.getTime() > exitTime)-->
+    <!--return;-->
+    <!--}-->
+    <!--}-->
+    <!--</script>-->
+
+</head>
+<body>
+
+sign:<span th:text="${out_trade_no}">ss</span>
+支付宝：<span th:text="${trade_no}">ss</span>
+状态：<span th:text="${trade_status}">ss</span>
+我是 return的页面
+
+</body>
+</html>

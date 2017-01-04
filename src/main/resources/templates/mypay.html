@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+
+    <!--<script type="text/javascript" src="/jquery/jquery.min.js"></script>-->
+    <script type="text/javascript" th:src="@{/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/jquery/jquery.jsonp-2.4.0.min.js}"></script>
+
+
+    <script th:inline="javascript" type="text/javascript">
+        window.onload = function () {
+//            demo();
+        };
+
+        function demo() {
+
+            $.ajax({
+                type: "get",
+                url: "selectpay1",
+                async: true,
+                data: {"orderid": [[${orderid}]]},
+                success: function (data) {
+                    if (data == "SUCCESS") {
+                        $("#erweima").hide();
+                        $("#ok").show();
+                        $("#ok").val("您已经支付成功！xixi");
+                    } else if (data == "USERPAYING") {
+                        $("#erweima").hide();
+                        $("#ok").show();
+                        $("#ok").val("正在付款中...");
+                        setTimeout("demo();", 1000);
+                    } else {
+                        setTimeout("demo();", 3000);
+//                        $("#id").css('display','none');
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+
+<div id="erweima"><p><span th:text="${result_code}">ss</span></p>
+</div>
+<div id="ok" style="display:none;">您已经支付成功！</div>
+
+</body>
+</html>

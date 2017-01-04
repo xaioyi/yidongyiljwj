@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yidongyiljwj:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="yidongyiljwj-0.1.0-RELEASE.war">
+      <element id="artifact" artifact-name="yidongyiljwj:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-codec-1.6" />
+          <element id="library" level="project" name="commons-httpclient-3.0.1" />
+          <element id="library" level="project" name="commons-logging-1.1.3" />
+          <element id="library" level="project" name="fluent-hc-4.3.4" />
+          <element id="library" level="project" name="httpclient-4.3.4" />
+          <element id="library" level="project" name="httpclient-cache-4.3.4" />
+          <element id="library" level="project" name="httpcore-4.3.2" />
+          <element id="library" level="project" name="httpmime-4.3.4" />
+          <element id="library" level="project" name="jaxen-1.1-beta-6" />
+          <element id="library" level="project" name="postgresql-9.4.1211.jre7" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
