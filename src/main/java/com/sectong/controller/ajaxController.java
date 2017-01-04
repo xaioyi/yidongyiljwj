@@ -24,14 +24,9 @@ public class ajaxController {
 
     @RequestMapping(value = "/text", method = RequestMethod.GET)
     public ModelAndView pay_payment(HttpServletRequest request) throws Exception {
-
-
         String out_trade_no = new String(request.getParameter("sign").getBytes("ISO-8859-1"), "UTF-8");
-
         //支付宝交易号
-
         String trade_no = new String(request.getParameter("trade_no").getBytes("ISO-8859-1"), "UTF-8");
-
         //交易状态
         String trade_status = new String(request.getParameter("trade_status").getBytes("ISO-8859-1"), "UTF-8");
         ModelAndView mv = new ModelAndView();
